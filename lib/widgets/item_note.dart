@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/constants.dart';
 
 class ItemNote extends StatelessWidget {
   const ItemNote({super.key});
@@ -7,23 +6,29 @@ class ItemNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10, bottom: 10, left: 5),
+      padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5),
       decoration: BoxDecoration(
           color: Colors.red, borderRadius: BorderRadius.circular(10)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: const Text(
+            title: const Padding(
+              padding: EdgeInsets.only(bottom: 12),
+              child: Text(
                 'Flutter Tips',
-                style: style,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Poppins',
+                ),
               ),
             ),
-            subtitle: const Text(
+            subtitle: Text(
               'Build your career with patoora',
-              style: style,
+              style: TextStyle(
+                color: Colors.white.withOpacity(.6),
+                fontFamily: 'Poppins',
+              ),
             ),
             trailing: IconButton(
                 onPressed: () {},
@@ -34,10 +39,13 @@ class ItemNote extends StatelessWidget {
                 )),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 8),
-            child: const Text(
+            padding: EdgeInsets.only(right: 8),
+            child: Text(
               'sep25 , 2023',
-              style: TextStyle(fontFamily: 'Poppins', fontSize: 10),
+              style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 10,
+                  color: Colors.white.withOpacity(0.3)),
             ),
           )
         ],
