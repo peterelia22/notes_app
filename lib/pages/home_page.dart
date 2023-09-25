@@ -15,14 +15,14 @@ class NotesPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25)),
               context: context,
               builder: (context) {
-                return AddNoteSheet();
+                return const AddNoteSheet();
               });
         },
         foregroundColor: Colors.red,
         backgroundColor: Colors.black,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
-      body: NotesBody(),
+      body: const NotesBody(),
     );
   }
 }
