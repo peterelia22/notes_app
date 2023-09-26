@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/pages/edit_note_page.dart';
 import 'package:notesapp/pages/home_page.dart';
 
 void main() {
@@ -11,6 +12,11 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: NotesPage.id,
+      routes: {
+        NotesPage.id: (context) => NotesPage(),
+        EditNotePage.id: (context) => EditNotePage()
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark),
       home: const NotesPage(),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/constants.dart';
 import 'package:notesapp/widgets/Add_note_bottomsheet.dart';
 import 'package:notesapp/widgets/notes_body.dart';
 
 class NotesPage extends StatelessWidget {
   const NotesPage({super.key});
-
+  static String id = 'Home Page';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class NotesPage extends StatelessWidget {
                 return const AddNoteSheet();
               });
         },
-        foregroundColor: Colors.red,
+        foregroundColor: kPrimaryColor,
         backgroundColor: Colors.black,
         child: const Icon(Icons.add),
       ),
