@@ -41,7 +41,7 @@ class ItemNote extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(
                     Icons.delete,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 35,
                   )),
             ),
