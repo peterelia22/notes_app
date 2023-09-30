@@ -51,6 +51,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           BlocBuilder<AddNotesCubit, AddNotesState>(
             builder: (context, state) {
               return CustomButton(
+                isLoading: state is AddNotesLoading ? true : false,
                 onTap: () {
                   if (formkey.currentState!.validate()) {
                     formkey.currentState!.save();
