@@ -11,8 +11,8 @@ import 'package:notesapp/pages/home_page.dart';
 void main() async {
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserve();
-  Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox(kPrimaryBox);
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const NotesApp());
 }
 
