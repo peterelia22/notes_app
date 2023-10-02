@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/Models/NoteModel.dart';
 import 'package:notesapp/constants.dart';
 import 'package:notesapp/pages/edit_note_page.dart';
 import 'package:notesapp/pages/home_page.dart';
 
 class ItemNote extends StatelessWidget {
-  const ItemNote({super.key});
-
+  const ItemNote({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -15,15 +16,15 @@ class ItemNote extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5),
         decoration: BoxDecoration(
-            color: kPrimaryColor, borderRadius: BorderRadius.circular(10)),
+            color: Color(note.color), borderRadius: BorderRadius.circular(10)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: const Padding(
+              title: Padding(
                 padding: EdgeInsets.only(bottom: 12),
                 child: Text(
-                  'Flutter Tips',
+                  note.tittle,
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'Poppins',
@@ -31,7 +32,7 @@ class ItemNote extends StatelessWidget {
                 ),
               ),
               subtitle: Text(
-                'Build your career with patoora',
+                note.content,
                 style: TextStyle(
                   color: Colors.black.withOpacity(.6),
                   fontFamily: 'Poppins',
@@ -48,11 +49,9 @@ class ItemNote extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(right: 8),
               child: Text(
-                'sep25 , 2023',
+                note.date,
                 style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 10,
-                    color: Colors.white.withOpacity(0.3)),
+                    fontFamily: 'Poppins', fontSize: 10, color: Colors.black),
               ),
             )
           ],
