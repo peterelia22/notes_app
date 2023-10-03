@@ -6,7 +6,7 @@ class EditNotePage extends StatelessWidget {
   static String id = 'Edit Page';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: EditNoteBody(),
     );
   }

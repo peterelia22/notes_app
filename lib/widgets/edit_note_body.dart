@@ -11,21 +11,21 @@ class EditNoteBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           CustomAppBar(
             tittle: 'Edit Note',
             icon: Icons.check,
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          CustomTextField(hintText: 'Tittle'),
-          SizedBox(
+          const CustomTextField(hintText: 'Tittle'),
+          const SizedBox(
             height: 25,
           ),
-          CustomTextField(
+          const CustomTextField(
             hintText: 'Content',
             maxLines: 5,
           )

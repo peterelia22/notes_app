@@ -22,10 +22,10 @@ class ItemNote extends StatelessWidget {
           children: [
             ListTile(
               title: Padding(
-                padding: EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.only(bottom: 12),
                 child: Text(
                   note.tittle,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontFamily: 'Poppins',
                   ),
@@ -47,10 +47,10 @@ class ItemNote extends StatelessWidget {
                   )),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.only(right: 8),
               child: Text(
                 note.date,
-                style: TextStyle(
+                style: const TextStyle(
                     fontFamily: 'Poppins', fontSize: 10, color: Colors.black),
               ),
             )
