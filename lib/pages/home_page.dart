@@ -10,26 +10,23 @@ class NotesPage extends StatelessWidget {
   static String id = 'Home Page';
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(
-                isScrollControlled: true,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25)),
-                context: context,
-                builder: (context) {
-                  return const AddNoteSheet();
-                });
-          },
-          foregroundColor: kPrimaryColor,
-          backgroundColor: Colors.black,
-          child: const Icon(Icons.add),
-        ),
-        body: const NotesBody(),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+              isScrollControlled: true,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+              context: context,
+              builder: (context) {
+                return const AddNoteSheet();
+              });
+        },
+        foregroundColor: kPrimaryColor,
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.add),
       ),
+      body: const NotesBody(),
     );
   }
 }
